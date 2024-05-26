@@ -12,19 +12,19 @@ function activarFormulario(){
 
 // ------------LOGIN-------------
 // obtener el formulario
-const formulario = document.querySelector('.form');
+const formulario = document.getElementById('form');
 
 // agregar un evento de escucha para cuando se envie el formulario
-formulario.addEventListener('submit',evento =>{
+formulario.addEventListener('submit', evento =>{
 
     // cancelar envio de datos por defecto
     evento.preventDefault();
 
     // valiar los campos del formulario
-    if (validarFomulario()){
+    if(validarFomulario()){
         // si todos los campos son validos, enviar el formulario
         formulario.submit();
-
+        alert('Formulario Enviado Correctamente');
     }
 });
 
@@ -50,7 +50,7 @@ function validarFomulario(){
     // }
 
     return true;
-}
+};
 
 // funcion para mostrar mensaje de error
 function mostrarError(campo,mensaje){
