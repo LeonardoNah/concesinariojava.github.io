@@ -6,7 +6,12 @@
 
 .main{
     height: 100vh;
-    background-color: bisque;
+    background-color: black;
+    position: absolute;
+}
+
+.carousel{
+    position: relative;
 }
 
 .navfondo{
@@ -19,4 +24,21 @@
     color: white;
     border-radius: 10px;
     height: 50vh;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color:rgba(81, 75, 75, 0.5);
+    color:white;
+    margin: 15%;
+    margin-left: 35%;
+    /* border-radius: 20px solid black; */
+    position: fixed;
+    z-index: 10;
+}
+
+.ocultar{
+    display: none;
 }

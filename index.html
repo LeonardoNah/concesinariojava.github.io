@@ -48,6 +48,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="#contactanos">Contactanos</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" id="btnLogin" href="#login">Iniciar Sesion</a>
+              </li>
               
               
             </ul>
@@ -56,7 +59,20 @@
         </div>
       </nav>
     <!-- Contenedor Main -->
-    <div id="carouselExampleDark" class="carousel carousel-dark slide main">
+    <!-- Contenedor Login -->
+    <form class="form">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <!-- Contenedor Carosel-->
+    <div id="carouselExampleDark" class="carousel slide main">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -190,6 +206,6 @@
     </div>
     
   </footer>
-  
+  <script src="./script/script.js"></script>
 </body>
 </html>
