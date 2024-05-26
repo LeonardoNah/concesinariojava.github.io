@@ -27,6 +27,16 @@
 }
 
 .form{
+    display: none;
+   
+}
+
+.error{
+    background-color: red;
+    border-radius: 5px;
+}
+
+.mostrar{
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -37,8 +47,4 @@
     /* border-radius: 20px solid black; */
     position: fixed;
     z-index: 10;
-}
-
-.ocultar{
-    display: none;
 }
