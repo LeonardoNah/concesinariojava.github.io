@@ -62,14 +62,16 @@
     <!-- Contenedor Login -->
     <form class="form">
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span id="email-error" class="error"></span>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
         <input type="password" class="form-control" id="exampleInputPassword1">
+        <span id="password-error" class="error"></span>
       </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <button type="submit" class="btn btn-primary">Ingresar</button>
     </form>
     <!-- Contenedor Carosel-->
     <div id="carouselExampleDark" class="carousel slide main">
