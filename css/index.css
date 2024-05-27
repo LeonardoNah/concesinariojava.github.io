@@ -6,12 +6,15 @@
 
 .main{
     height: 100vh;
-    background-color: black;
     position: absolute;
+    visibility: 1;
+    opacity: 1;
 }
 
 .carousel{
     position: relative;
+    opacity: 9;
+    visibility: 9;
 }
 
 .navfondo{
@@ -36,15 +39,31 @@
     border-radius: 5px;
 }
 
+.mapa-contactanos{
+    margin: 5rem;
+    /* background-color: brown; */
+}
+
 .mostrar{
     display: flex;
     flex-direction: column;
     width: 30%;
-    background-color:rgba(81, 75, 75, 0.5);
+    height: 50%;
+    background-color:rgba(81, 75, 75, 0.8);
     color:white;
-    margin: 15%;
+    margin: 10%;
     margin-left: 35%;
-    /* border-radius: 20px solid black; */
+    border-radius: 20px;
     position: fixed;
     z-index: 10;
+    text-align: center;
+    padding: 10px;
 }
+
+@media (max-width:1000px){
+    .mostrar{
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+

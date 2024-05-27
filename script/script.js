@@ -25,6 +25,7 @@ formulario.addEventListener('submit', evento =>{
         // si todos los campos son validos, enviar el formulario
         formulario.submit();
         alert('Formulario Enviado Correctamente');
+        formulario.reset();
     }
 });
 
@@ -66,3 +67,24 @@ function validarEmail(email){
 
 }
 
+// ------------------API
+function getCharacters(done){
+    const results = fetch("https://rickandmortyapi.com/api/character");
+
+    results
+        .then(responde => responde.json)
+        .then(data => {
+            done(data);
+        });
+}
+
+getCharacters(data => {
+    data.results.forEach(personaje => {
+        const article = document.createRange().createContextualFragment(
+            
+           
+        )
+        const main = document.querySelector('main');
+        main.append(article)
+    })
+})
