@@ -60,6 +60,10 @@
     padding: 10px;
 }
 
+.custom-letra{
+    font-size: 10px ;
+}
+
 @media (max-width:1000px){
     .mostrar{
         width: 50%;
