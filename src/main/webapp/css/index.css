@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    height: 100vh;
+    position: absolute;
+    visibility: 1;
+    opacity: 1;
+}
+
+.carousel{
+    position: relative;
+    opacity: 9;
+    visibility: 9;
+}
+
+.navfondo{
+    background-color: rgba(82, 77, 77,0.6);
+    font-weight: bold;
+}
+
+.style_nosotros{
+    background-color:grey;
+    color: white;
+    border-radius: 10px;
+    height: 50vh;
+}
+
+.form{
+    display: none;
+   
+}
+
+.error{
+    background-color: red;
+    border-radius: 5px;
+}
+
+.mapa-contactanos{
+    margin: 5rem;
+    /* background-color: brown; */
+}
+
+.mostrar{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 50%;
+    background-color:rgba(81, 75, 75, 0.8);
+    color:white;
+    margin: 10%;
+    margin-left: 35%;
+    border-radius: 20px;
+    position: fixed;
+    z-index: 10;
+    text-align: center;
+    padding: 10px;
+}
+
+.custom-letra{
+    font-size: 10px;
+}
+
+@media (max-width:1000px){
+    .mostrar{
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+

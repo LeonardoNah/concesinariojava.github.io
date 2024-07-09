@@ -1,0 +1,51 @@
+/* Estilos generales del formulario */
+h1{
+    text-align: center;
+}
+.form {
+    width: 280px;
+    margin:0 auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilos para los campos de entrada */
+  .form-control {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+  }
+  
+  /* Estilos para el botón de inicio de sesión */
+  .btn-primary {
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Estilos para los mensajes de error */
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  
+  /* Ajusta la posición del formulario en la página */
+  #form {
+    top: 180px;
+    /* position: absolute; */
+    transition: 0.5s;
+    width: 280px;
+    margin:0 auto;
+  }
+  

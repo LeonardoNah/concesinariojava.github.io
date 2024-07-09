@@ -22,9 +22,6 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="#nosotros">Nosotros</a>
               </li>
               <li class="nav-item dropdown">
@@ -54,6 +51,9 @@
               <li class="nav-item">
                 <a class="nav-link" id="btnLogin" href="#login">Registro de Usuario</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" id="btnLogin" href="./html/inicioSesion.html">Iniciar Sesion</a>
+              </li>
               
               
             </ul>
@@ -63,7 +63,14 @@
       </nav>
     <!-- Contenedor Main -->
     <main>
-
+      <div class="container">
+        <!-- mensajeTexto -->
+         <div id="mensajeExito" style="display: none;" data-aos="fade-down" data-aos-duration="1000"
+         class="alert alert-success alert-dismissible fade show" role="alert">Registro Exitoso
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+        onclick="this.parentElement.style.display='none';"></button>
+        </div>
+      </div>
       <!-- <main>
         <article>
           <div class="image-container">
@@ -74,18 +81,18 @@
       </article>
       </main> -->
       <!-- Contenedor Login -->
-      <form class="form" id="form">
+      <form action="/proyectoJava_24112/registro" method="post" class="form" id="form">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-          <input type="text" class="form-control" id="exampleInputEmail1">
+          <input type="text" class="form-control" id="exampleInputEmail1" name="correo">
           <span id="email-error" class="error"></span>
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password">
           <span id="password-error" class="error"></span>
         </div>
-        <button type="submit" class="btn btn-primary">Ingresar</button>
+        <button type="submit" class="btn btn-primary">Registrar</button>
       </form>
       <!-- Contenedor Carosel-->
       <div id="carouselExampleDark" class="carousel slide main oscuro">
@@ -161,9 +168,10 @@
     
         <!-- Contenedor Nosotros -->
         <div class="container text-center  style_nosotros" id="nosotros">
-          <h1>Quienes Somos</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, a nesciunt? Doloremque minima, inventore beatae ullam quasi aut nisi aliquid hic! Molestias voluptas explicabo minima saepe iste, magni at quam.lorem
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur illo voluptate autem dolor praesentium accusantium molestias enim tempore voluptas! Est quis laudantium dolorem corrupti neque ipsa rem accusantium, ut quo!</p>
+          <h1>Java Motors: Una Historia de Pasión y Velocidad</h1>
+          <p>Carlos, un antiguo piloto de carreras, siempre soñó con crear un espacio donde los motores rugieran y las emociones se desbordaran. Así nació Java Motors, con su lema: “Donde la velocidad se encuentra con la elegancia”. El edificio de ladrillos rojos, con grandes ventanales que exhiben los automóviles más codiciados, se ha convertido en un ícono local.
+
+Los clientes llegan a Java Motors en busca de algo más que un simple vehículo. Aquí, cada coche tiene una historia que contar. Desde el clásico Mustang de 1965 hasta el último modelo eléctrico de alta gama, cada uno tiene su lugar en la sala de exhibición. Los vendedores, apasionados por los detalles técnicos y las curvas aerodinámicas, comparten sus conocimientos con los visitantes.</p>
             
           </div>
           <div class="mapa-contactanos">
@@ -229,5 +237,17 @@
     
   </footer>
   <script src="./script/script.js"></script>
+  <script>
+    AOS.init();
+
+    window.onload = function () {
+      var urlParams = new URLSearchParams(window.location.search);
+      if(urlParams.get('exito') === 'true'){
+        document.getElementById('mensajeExito').style.display='block';
+      }else if (urlParams.get('error')=== 'true'){
+        document.getElementById('mensajeError').style.display='block';
+      }
+    }
+  </script>
 </body>
 </html>
